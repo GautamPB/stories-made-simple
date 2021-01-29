@@ -1,0 +1,49 @@
+.mainContent {
+    height: 100%;
+    background-color: black;
+}
+
+.mainContent__imageRow {
+    display: flex;
+}
+
+.image {
+    width: 49%;
+    margin: 5px;
+    /* height: 44vh; */
+}
+
+.image > img {
+    width: 100%;
+    height: 100%;
+}
+
+.image:hover {
+    cursor: pointer;
+}
+
+.content {
+    position: relative;
+    top: -100%;
+    background-color: white;
+    opacity: 0.6;
+    margin: auto;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+}
+
+/* .content:hover {
+    cursor: pointer;
+} */
+
+.stuff {
+    margin: auto;
+    font-size: 30px;
+}
+
+.stuff > .MuiSvgIcon-root {
+    font-size: 50px;
+    text-align: center;
+}

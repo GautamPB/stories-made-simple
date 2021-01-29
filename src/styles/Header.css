@@ -1,12 +1,26 @@
 .header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__top {
     padding: 5px 20px;
     display: flex;
     justify-content: space-between;
     position: sticky;
     top: 0px;
     z-index: 100;
-    background-color: lightgreen;
+    background-color: #a8840d;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header__slogan {
+    background-color: #7a8b24;
+    padding: 40px;
+    text-align: center;
+    position: sticky;
+    top: 80px;
+    z-index: 2;
 }
 
 .header__logo > img {
@@ -14,6 +28,7 @@
     object-fit: contain;
     border-radius: 999px;
     margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .header__logo:hover {
@@ -24,6 +39,8 @@
     display: flex;
     flex: 1;
     justify-content: center;
+    font-family: 'Comic Sans';
+    text-decoration: none;
 }
 
 .header__option {
@@ -31,6 +48,7 @@
     align-items: center;
     padding: 0 30px;
     cursor: pointer;
+    font-size: 25px;
 }
 
 .header__option > h3 {
@@ -40,6 +58,7 @@
 .header__option:hover {
     border-bottom: solid #f1da7a 5px;
     color: #d9544d;
+    margin-bottom: -5px;
 }
 
 .header__userInfo {
