@@ -4,7 +4,7 @@ import MainContent from './components/MainContent'
 import About from './components/About'
 import Stories from './components/Stories'
 import Poems from './components/Poems'
-import Articles from './components/Articles'
+import History from './components/History'
 import Reviews from './components/Reviews'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -28,9 +28,9 @@ function App() {
                         <Poems />
                     </Route>
 
-                    <Route path="/articles">
+                    <Route path="/history">
                         <Header />
-                        <Articles />
+                        <History />
                     </Route>
 
                     <Route path="/reviews">

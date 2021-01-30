@@ -1,12 +1,12 @@
-.reviews {
+.history {
     margin-bottom: 30px;
 }
 
-.reviews__image {
+.history__image {
     text-align: center;
 }
 
-.reviews__image > img {
+.history__image > img {
     border-radius: 999px;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -14,6 +14,6 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.reviews__content {
+.history__content {
     text-align: center;
 }

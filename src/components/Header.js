@@ -3,7 +3,8 @@ import '../styles/Header.css'
 import HomeIcon from '@material-ui/icons/Home'
 import BookIcon from '@material-ui/icons/Book'
 import MusicNoteIcon from '@material-ui/icons/MusicNote'
-import AssignmentIcon from '@material-ui/icons/Assignment'
+// import AssignmentIcon from '@material-ui/icons/Assignment'
+import HourglassFullIcon from '@material-ui/icons/HourglassFull'
 import RateReviewIcon from '@material-ui/icons/RateReview'
 import InfoIcon from '@material-ui/icons/Info'
 import logo from '../Logo_1.png'
@@ -19,45 +20,45 @@ function Header() {
                 </div>
 
                 <div className="header__options">
-                    <Link to="/">
+                    <Link to="/" className="header__link">
                         <div className="header__option">
                             <HomeIcon />
-                            <h3>Home</h3>
+                            {/* <h3>Home</h3> */}
                         </div>
                     </Link>
 
-                    <Link to="/about">
+                    <Link to="/about" className="header__link">
                         <div className="header__option">
                             <InfoIcon />
-                            <h3>About</h3>
+                            {/* <h3>About</h3> */}
                         </div>
                     </Link>
 
-                    <Link to="/stories">
+                    <Link to="/stories" className="header__link">
                         <div className="header__option">
                             <BookIcon />
-                            <h3>Stories</h3>
+                            {/* <h3>Stories</h3> */}
                         </div>
                     </Link>
 
-                    <Link to="/poems">
+                    <Link to="/poems" className="header__link">
                         <div className="header__option">
                             <MusicNoteIcon />
-                            <h3>Poems</h3>
+                            {/* <h3>Poems</h3> */}
                         </div>
                     </Link>
 
-                    <Link to="/articles">
+                    <Link to="/history" className="header__link">
                         <div className="header__option">
-                            <AssignmentIcon />
-                            <h3>Articles</h3>
+                            <HourglassFullIcon />
+                            {/* <h3>Articles</h3> */}
                         </div>
                     </Link>
 
-                    <Link to="/reviews">
+                    <Link to="/reviews" className="header__link">
                         <div className="header__option">
                             <RateReviewIcon />
-                            <h3>Reviews</h3>
+                            {/* <h3>Reviews</h3> */}
                         </div>
                     </Link>
                 </div>
