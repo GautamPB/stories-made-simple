@@ -10,7 +10,7 @@ function History() {
             </div>
 
             <div className="history__content">
-                <h1>This content is coming soon!</h1>
+                <h1>The history content is coming soon!</h1>
             </div>
         </div>
     )

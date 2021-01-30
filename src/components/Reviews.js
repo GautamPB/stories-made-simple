@@ -10,7 +10,7 @@ function Reviews() {
             </div>
 
             <div className="reviews__content">
-                <h1>This content is coming soon!</h1>
+                <h1>The reviews are coming soon!</h1>
             </div>
         </div>
     )
