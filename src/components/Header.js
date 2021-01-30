@@ -14,63 +14,58 @@ import { Link } from 'react-router-dom'
 function Header() {
     return (
         <div className="header">
-            <div className="header__top">
-                <div className="header__logo">
-                    <img src={logo} alt="" />
-                </div>
-
-                <div className="header__options">
-                    <Link to="/" className="header__link">
-                        <div className="header__option">
-                            <HomeIcon />
-                            {/* <h3>Home</h3> */}
-                        </div>
-                    </Link>
-
-                    <Link to="/about" className="header__link">
-                        <div className="header__option">
-                            <InfoIcon />
-                            {/* <h3>About</h3> */}
-                        </div>
-                    </Link>
-
-                    <Link to="/stories" className="header__link">
-                        <div className="header__option">
-                            <BookIcon />
-                            {/* <h3>Stories</h3> */}
-                        </div>
-                    </Link>
-
-                    <Link to="/poems" className="header__link">
-                        <div className="header__option">
-                            <MusicNoteIcon />
-                            {/* <h3>Poems</h3> */}
-                        </div>
-                    </Link>
-
-                    <Link to="/history" className="header__link">
-                        <div className="header__option">
-                            <HourglassFullIcon />
-                            {/* <h3>Articles</h3> */}
-                        </div>
-                    </Link>
-
-                    <Link to="/reviews" className="header__link">
-                        <div className="header__option">
-                            <RateReviewIcon />
-                            {/* <h3>Reviews</h3> */}
-                        </div>
-                    </Link>
-                </div>
-
-                <div className="header__userInfo">
-                    <Avatar />
-                    <h3>Username</h3>
-                </div>
+            <div className="header__logo">
+                <img src={logo} alt="" />
+                <p>TALES . MYTHS . LEGENDS</p>
             </div>
 
-            <div className="header__slogan">
-                <h1>TALES . MYTHS . LEGENDS</h1>
+            <div className="header__options">
+                <Link to="/" className="header__link">
+                    <div className="header__option">
+                        <HomeIcon />
+                        {/* <h3>Home</h3> */}
+                    </div>
+                </Link>
+
+                <Link to="/about" className="header__link">
+                    <div className="header__option">
+                        <InfoIcon />
+                        {/* <h3>About</h3> */}
+                    </div>
+                </Link>
+
+                <Link to="/stories" className="header__link">
+                    <div className="header__option">
+                        <BookIcon />
+                        {/* <h3>Stories</h3> */}
+                    </div>
+                </Link>
+
+                <Link to="/poems" className="header__link">
+                    <div className="header__option">
+                        <MusicNoteIcon />
+                        {/* <h3>Poems</h3> */}
+                    </div>
+                </Link>
+
+                <Link to="/history" className="header__link">
+                    <div className="header__option">
+                        <HourglassFullIcon />
+                        {/* <h3>Articles</h3> */}
+                    </div>
+                </Link>
+
+                <Link to="/reviews" className="header__link">
+                    <div className="header__option">
+                        <RateReviewIcon />
+                        {/* <h3>Reviews</h3> */}
+                    </div>
+                </Link>
+            </div>
+
+            <div className="header__userInfo">
+                <Avatar />
+                <h3>Username</h3>
             </div>
         </div>
     )

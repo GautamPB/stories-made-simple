@@ -1,0 +1,31 @@
+.contentTitle {
+    display: flex;
+    margin: 20px;
+    border: 1px solid gray;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contentTitle__left {
+    display: flex;
+}
+
+.content__leftData {
+    margin-left: 20px;
+}
+
+.content__leftData:hover {
+    cursor: pointer;
+}
+
+.contentTitle__right {
+    display: flex;
+    position: absolute;
+    right: 40px;
+    margin: 20px;
+}
+
+.contentTitle__right > button {
+    border-radius: 999px;
+    padding: 10px;
+}

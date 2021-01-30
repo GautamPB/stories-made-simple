@@ -1,18 +1,14 @@
 .header {
     display: flex;
-    flex-direction: column;
     position: sticky;
     top: 0px;
     z-index: 1;
-}
-
-.header__top {
     padding: 5px 20px;
     display: flex;
-    justify-content: space-between;
     z-index: 100;
     background-color: #a8840d;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    justify-content: space-evenly;
 }
 
 .header__link {
@@ -22,13 +18,9 @@
     margin-bottom: auto;
 }
 
-.header__slogan {
-    background-color: #7a8b24;
-    padding: 40px;
-    text-align: center;
-    position: sticky;
-    top: 80px;
-    z-index: 2;
+.header__logo {
+    display: flex;
+    align-items: center;
 }
 
 .header__logo > img {
@@ -39,14 +31,18 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.header__logo > p {
+    font-weight: 600;
+}
+
 .header__logo:hover {
     cursor: pointer;
 }
 
 .header__options {
     display: flex;
-    flex: 1;
-    justify-content: center;
+    align-self: center;
+    margin: auto;
     font-family: 'Comic Sans';
     text-decoration: none;
 }
