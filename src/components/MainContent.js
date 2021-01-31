@@ -23,7 +23,9 @@ function MainContent() {
                         </div>
                     </div>
                 </Link>
+            </div>
 
+            <div className="mainContent__imageRow">
                 <Link to="/poems" className="image">
                     <img
                         src="https://i.pinimg.com/originals/a1/2a/81/a12a81a4f1745cf4dd7929498b589b41.jpg"
@@ -34,21 +36,6 @@ function MainContent() {
                         <div className="stuff">
                             <MusicNoteIcon />
                             <h1>Poems</h1>
-                        </div>
-                    </div>
-                </Link>
-            </div>
-
-            <div className="mainContent__imageRow">
-                <Link to="/reviews" className="image">
-                    <img
-                        src="https://iodigital.io/wp-content/uploads/2019/03/rating.jpg"
-                        alt=""
-                    />
-                    <div className="content">
-                        <div className="stuff">
-                            <RateReviewIcon />
-                            <h1>Reviews</h1>
                         </div>
                     </div>
                 </Link>

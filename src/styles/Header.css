@@ -49,6 +49,7 @@
 
 .header__option {
     display: flex;
+    flex-direction: column;
     align-items: center;
     padding: 0 30px;
     cursor: pointer;
@@ -60,9 +61,7 @@
 }
 
 .header__option:hover {
-    /* border-bottom: solid #f1da7a 5px; */
     color: #d9544d;
-    /* margin-bottom: -5px; */
 }
 
 .header__userInfo {
@@ -70,10 +69,10 @@
     align-items: center;
 }
 
-.header__userInfo > h3 {
-    margin-left: 10px;
-}
-
 .header__userInfo:hover {
     cursor: pointer;
+}
+
+.user__pic {
+    margin-right: 10px;
 }

@@ -14,57 +14,52 @@ import { Link } from 'react-router-dom'
 function Header() {
     return (
         <div className="header">
-            <div className="header__logo">
-                <img src={logo} alt="" />
-                <p>TALES . MYTHS . LEGENDS</p>
-            </div>
+            <Link to="/" className="header__link">
+                <div className="header__logo">
+                    <img src={logo} alt="" />
+                    <p>TALES . MYTHS . LEGENDS</p>
+                </div>
+            </Link>
 
             <div className="header__options">
                 <Link to="/" className="header__link">
                     <div className="header__option">
                         <HomeIcon />
-                        {/* <h3>Home</h3> */}
+                        <h4>Home</h4>
                     </div>
                 </Link>
 
                 <Link to="/about" className="header__link">
                     <div className="header__option">
                         <InfoIcon />
-                        {/* <h3>About</h3> */}
+                        <h4>About</h4>
                     </div>
                 </Link>
 
                 <Link to="/stories" className="header__link">
                     <div className="header__option">
                         <BookIcon />
-                        {/* <h3>Stories</h3> */}
+                        <h4>Stories</h4>
                     </div>
                 </Link>
 
                 <Link to="/poems" className="header__link">
                     <div className="header__option">
                         <MusicNoteIcon />
-                        {/* <h3>Poems</h3> */}
+                        <h4>Poems</h4>
                     </div>
                 </Link>
 
                 <Link to="/history" className="header__link">
                     <div className="header__option">
                         <HourglassFullIcon />
-                        {/* <h3>Articles</h3> */}
-                    </div>
-                </Link>
-
-                <Link to="/reviews" className="header__link">
-                    <div className="header__option">
-                        <RateReviewIcon />
-                        {/* <h3>Reviews</h3> */}
+                        <h4>History</h4>
                     </div>
                 </Link>
             </div>
 
             <div className="header__userInfo">
-                <Avatar />
+                <Avatar className="user__pic" />
                 <h3>Username</h3>
             </div>
         </div>
