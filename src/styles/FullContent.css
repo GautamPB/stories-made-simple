@@ -1,0 +1,21 @@
+.fullContent {
+    margin: 50px;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.fullContent__top {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+}
+
+.fullContent__details {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.fullContent__body {
+    margin-top: 20px;
+    font-size: 20px;
+}

@@ -6,6 +6,7 @@ import Stories from './components/Stories'
 import Poems from './components/Poems'
 import History from './components/History'
 import Reviews from './components/Reviews'
+import FullContent from './components/FullContent'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -36,6 +37,11 @@ function App() {
                     <Route path="/reviews">
                         <Header />
                         <Reviews />
+                    </Route>
+
+                    <Route path="/content/:title">
+                        <Header />
+                        <FullContent />
                     </Route>
 
                     <Route path="/">
