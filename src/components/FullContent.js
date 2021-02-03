@@ -6,6 +6,9 @@ import '../styles/FullContent.css'
 function FullContent() {
     const { title } = useParams()
 
+    const text = `Line 1 of text content
+Line 2 of text content`
+
     return (
         <div className="fullContent">
             <div className="fullContent__top">
@@ -16,12 +19,14 @@ function FullContent() {
                 </div>
             </div>
 
-            <p className="fullContent__body">
-                Story content sadjfklsadfjskadfjskadfjsakfsj
-                sahdfjsfjsafhsaf\sadjfklsadfjskadfjskadfjsakfsjsajfhsafs
-                sjakdhfsa dasfjhasfas fsafhas;fas fsa;lkfhsafhsafa jsahfkjaslhf
-                asdfjsahdfsahfjsaf safsjkahfsakjfas fsajdfkbskfd
-            </p>
+            <textarea
+                rows="25"
+                cols="150"
+                readOnly="true"
+                className="fullContent__body"
+            >
+                {text}
+            </textarea>
         </div>
     )
 }

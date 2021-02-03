@@ -5,6 +5,10 @@
     border-radius: 20px;
 }
 
+.fullContent > textarea {
+    outline: none;
+}
+
 .fullContent__top {
     display: flex;
     border-bottom: 1px solid lightgray;
@@ -18,4 +22,6 @@
 .fullContent__body {
     margin-top: 20px;
     font-size: 20px;
+    outline: none;
+    padding: 10px;
 }

@@ -9,19 +9,18 @@ const PostContent = () => {
 
     const [title, setTitle] = useState('')
 
-    const [para1, setPara1] = useState('')
-    const [img1, setImg1] = useState('')
+    const [postContent, setPostContent] = useState('')
 
     const postStory = () => {
         console.log('Story Posted!')
         console.log(title)
-        console.log(para1)
+        console.log(PostContent)
     }
 
     const postPoem = () => {
         console.log('Poem Posted!')
         console.log(title)
-        console.log(para1)
+        console.log(postContent)
     }
 
     const postData = (e) => {
@@ -31,12 +30,18 @@ const PostContent = () => {
         } else if (content === 'poem') {
             postPoem()
         }
-        history.push('/')
+        // history.push('/')
+        setPostContent('')
     }
 
     return (
         <div className="postContent">
-            <h1>New {content}</h1>
+            <div className="postContent__top">
+                <h1>New {content}</h1>
+                <div className="postContent__button">
+                    <Button onClick={postData}>Upload</Button>
+                </div>
+            </div>
             <div className="input__content">
                 <form className="postContent__form">
                     <div className="form__input">
@@ -48,28 +53,20 @@ const PostContent = () => {
                     </div>
 
                     <div className="form__input">
-                        <h3>Paragraph 1</h3>
+                        <h3>Content</h3>
                         <textarea
-                            name="para1"
-                            rows="10"
-                            cols="200"
-                            value={para1}
+                            name="content"
+                            rows="100"
+                            value={postContent}
                             onChange={(e) => {
-                                setPara1(e.target.value)
+                                setPostContent(e.target.value)
                             }}
-                        />
-                        <h3>Image 1</h3>
-                        <input
-                            value={img1}
-                            onChange={(e) => setImg1(e.target.value)}
                         />
                     </div>
 
                     <br />
                     <br />
                 </form>
-
-                <Button onClick={postData}>Post</Button>
             </div>
         </div>
     )

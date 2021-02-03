@@ -1,7 +1,5 @@
 .postContent {
-    margin-top: 30px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 50px;
     padding: 20px;
     border: solid 1px black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -20,7 +18,26 @@
     outline: none;
 }
 
+.form__input > h1 {
+    width: 100%;
+}
+
 .form__input > textarea {
     font-size: 15px;
     outline: none;
+    width: 1720px;
+}
+
+.postContent__button > button {
+    background-color: #fc4f08;
+    border-radius: 999px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    right: 70px;
+}
+
+.postContent__top {
+    display: flex;
 }
