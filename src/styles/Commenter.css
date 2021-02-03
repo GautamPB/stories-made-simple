@@ -1,0 +1,22 @@
+.commenter {
+    display: flex;
+    padding: 10px;
+    background-color: #eff2f5;
+    margin-bottom: 20px;
+    border-radius: 999px;
+    align-items: center;
+}
+
+.commenter > input {
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 100%;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.commenter > button {
+    border-radius: 999px;
+    padding: 15px;
+}

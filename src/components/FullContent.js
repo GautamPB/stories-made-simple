@@ -1,6 +1,8 @@
 import { Avatar } from '@material-ui/core'
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Comment from './Comment'
+import Commenter from './Commenter'
 import '../styles/FullContent.css'
 
 function FullContent() {
@@ -20,13 +22,18 @@ Line 2 of text content`
             </div>
 
             <textarea
-                rows="25"
+                rows="100"
                 cols="150"
                 readOnly="true"
                 className="fullContent__body"
             >
                 {text}
             </textarea>
+
+            <Commenter />
+            <Comment user="Gautam" comment="Good one!" />
+
+            <Comment user="Ganesh" comment="Nice" />
         </div>
     )
 }
