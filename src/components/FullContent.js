@@ -14,7 +14,7 @@ Line 2 of text content`
     return (
         <div className="fullContent">
             <div className="fullContent__top">
-                <Avatar />
+                <Avatar src="https://lh3.googleusercontent.com/a-/AOh14Gi1SqiVNRARrLdtr7VhpyzoaLsW46JWKT5dAcSkNg=s96-c" />
                 <div className="fullContent__details">
                     <h1>{title}</h1>
                     <p>Ratna Prabha</p>

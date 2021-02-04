@@ -10,8 +10,11 @@ import FullContent from './components/FullContent'
 import PostContent from './components/PostContent'
 import Login from './components/Login'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+// import { useStateValue } from './components/StateProvider'
 
 function App() {
+    // const [{ user }, dispatch] = useStateValue()
+
     return (
         <Router>
             <div className="App">

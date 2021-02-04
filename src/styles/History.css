@@ -1,9 +1,15 @@
 .history {
     margin-bottom: 30px;
+    /* background-image: url('https://akm-img-a-in.tosshub.com/indiatoday/indusvalleyscript1_121413124820.jpg?LzXpdozaBRAAwKQuch7H9qQGtZ2k2zrk&size=1200:675'); */
+    margin-top: -20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
 }
 
 .history__image {
     text-align: center;
+    z-index: 1;
 }
 
 .history__image > img {

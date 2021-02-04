@@ -3,16 +3,15 @@ import '../styles/Header.css'
 import HomeIcon from '@material-ui/icons/Home'
 import BookIcon from '@material-ui/icons/Book'
 import MusicNoteIcon from '@material-ui/icons/MusicNote'
-// import AssignmentIcon from '@material-ui/icons/Assignment'
 import HourglassFullIcon from '@material-ui/icons/HourglassFull'
-import RateReviewIcon from '@material-ui/icons/RateReview'
 import InfoIcon from '@material-ui/icons/Info'
 import logo from '../Logo_1.png'
 import { Avatar } from '@material-ui/core'
 import { Link } from 'react-router-dom'
+import { useStateValue } from './StateProvider'
 
 function Header() {
-    const user = null
+    const [{ user }, dispatch] = useStateValue()
 
     return (
         <div className="header">
@@ -62,8 +61,11 @@ function Header() {
 
             <div className="header__userInfo">
                 <Link to={user ? '/' : '/login'} className="header__userInfo">
-                    <Avatar className="user__pic" />
-                    <h3>{user ? user : 'Login'}</h3>
+                    <Avatar
+                        className="user__pic"
+                        src={user ? user.photoURL : ''}
+                    />
+                    <h3>{user ? user.displayName : 'Login'}</h3>
                 </Link>
             </div>
         </div>

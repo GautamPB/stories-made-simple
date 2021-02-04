@@ -8,7 +8,7 @@ function ContentTitle({ id, title, timestamp }) {
     return (
         <div className="contentTitle">
             <div className="contentTitle__left">
-                <Avatar src="https://twitter.com/Gautam_PB/photo" />
+                <Avatar src="https://lh3.googleusercontent.com/a-/AOh14Gi1SqiVNRARrLdtr7VhpyzoaLsW46JWKT5dAcSkNg=s96-c" />
                 <div className="content__leftData">
                     <p>timestamp...</p>
                     <Link to={'/content/' + title} className="header__link">

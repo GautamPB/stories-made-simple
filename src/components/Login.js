@@ -1,16 +1,31 @@
 import { Button } from '@material-ui/core'
 import React from 'react'
-import { useHistory } from 'react-router-dom'
 import logo from '../Logo_1.png'
 import '../styles/Login.css'
+import { auth, provider } from '../firebase'
+import { actionTypes } from './reducer'
+import { useStateValue } from './StateProvider'
+import { useHistory } from 'react-router-dom'
 
 const Login = () => {
     const history = useHistory()
 
+    const [user, dispatch] = useStateValue()
+
     const handleLogin = () => {
-        //login logic
-        console.log('Login button clicked!')
-        history.push('/')
+        // login logic
+        auth.signInWithPopup(provider)
+            .then((result) => {
+                console.log(result.user)
+                dispatch({
+                    type: actionTypes.SET_USER,
+                    user: result.user,
+                })
+                history.push('/')
+            })
+            .catch((error) => {
+                alert(error)
+            })
     }
 
     return (
