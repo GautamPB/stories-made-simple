@@ -20,3 +20,12 @@
     border-radius: 999px;
     padding: 15px;
 }
+
+.commenter__link {
+    text-decoration: none;
+}
+
+.commenter__link > button {
+    border-radius: 999px;
+    padding: 15px;
+}

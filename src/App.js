@@ -8,6 +8,7 @@ import History from './components/History'
 import Reviews from './components/Reviews'
 import FullContent from './components/FullContent'
 import PostContent from './components/PostContent'
+import Login from './components/Login'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -53,6 +54,11 @@ function App() {
                     <Route path="/post/:content">
                         <Header />
                         <PostContent />
+                    </Route>
+
+                    <Route path="/login">
+                        <Header />
+                        <Login />
                     </Route>
 
                     <Route path="/">

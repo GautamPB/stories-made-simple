@@ -2,7 +2,11 @@ import { Avatar } from '@material-ui/core'
 import React from 'react'
 import '../styles/Comment.css'
 
-const Comment = ({ user, comment }) => {
+const Comment = ({ comment }) => {
+    //put user as a parameter
+
+    const user = null
+
     return (
         <div className="comment">
             <div className="commenter__top">

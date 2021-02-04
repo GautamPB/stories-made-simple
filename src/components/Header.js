@@ -12,6 +12,8 @@ import { Avatar } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 
 function Header() {
+    const user = null
+
     return (
         <div className="header">
             <Link to="/" className="header__link">
@@ -59,8 +61,10 @@ function Header() {
             </div>
 
             <div className="header__userInfo">
-                <Avatar className="user__pic" />
-                <h3>Username</h3>
+                <Link to={user ? '/' : '/login'} className="header__userInfo">
+                    <Avatar className="user__pic" />
+                    <h3>{user ? user : 'Login'}</h3>
+                </Link>
             </div>
         </div>
     )

@@ -76,3 +76,8 @@
 .user__pic {
     margin-right: 10px;
 }
+
+.header__userInfo {
+    text-decoration: none;
+    color: black;
+}

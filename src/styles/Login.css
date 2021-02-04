@@ -1,0 +1,33 @@
+.login {
+    margin-bottom: 30px;
+}
+
+.login__image {
+    text-align: center;
+}
+
+.login__image > img {
+    border-radius: 999px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login__content {
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.login__button {
+    text-align: center;
+}
+
+.login__button > button {
+    background-color: #a8840d;
+    min-width: 350px;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+}
