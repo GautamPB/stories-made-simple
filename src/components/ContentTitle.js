@@ -4,7 +4,7 @@ import '../styles/ContentTitle.css'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward'
 import { Link } from 'react-router-dom'
 
-function ContentTitle({ id, title, timestamp }) {
+function ContentTitle({ title, timestamp }) {
     return (
         <div className="contentTitle">
             <div className="contentTitle__left">

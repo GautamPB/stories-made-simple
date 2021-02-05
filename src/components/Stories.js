@@ -1,23 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/Stories.css'
 import ContentTitle from './ContentTitle'
+import db from '../firebase'
 
 function Stories() {
+    const [stories, setStories] = useState([])
+
+    useEffect(() => {
+        db.collection('stories').onSnapshot((snapshot) =>
+            setStories(
+                snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    data: doc.data(),
+                }))
+            )
+        )
+    }, [])
+
     return (
         <div className="stories">
-            <ContentTitle title="Story Title 1" />
-
-            <ContentTitle title="Story Title 2" />
-
-            <ContentTitle title="Story Title 3" />
-
-            <ContentTitle title="Story Title 4" />
-
-            <ContentTitle title="Story Title 5" />
-
-            <ContentTitle title="Story Title 6" />
-
-            <ContentTitle title="Story Title 7" />
+            {stories.map((story) => (
+                <ContentTitle title={story.data.contentTitle} />
+            ))}
         </div>
     )
 }

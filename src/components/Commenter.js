@@ -3,14 +3,24 @@ import { Link } from 'react-router-dom'
 import React, { useState } from 'react'
 import '../styles/Commenter.css'
 import { useStateValue } from './StateProvider'
+import db from '../firebase'
 
-const Commenter = () => {
+const Commenter = ({ title }) => {
     const [comment, setComment] = useState('')
 
     const [{ user }, dispatch] = useStateValue()
 
-    const addComment = () => {
-        console.log(comment)
+    const addComment = (e) => {
+        e.preventDefault()
+        //logic to push a comment to the database
+
+        db.collection('comments').add({
+            message: comment,
+            profilePic: user.photoURL,
+            blogTitle: title,
+            username: user.displayName,
+        })
+
         setComment('')
     }
 
@@ -22,9 +32,9 @@ const Commenter = () => {
                 onChange={(e) => setComment(e.target.value)}
                 placeholder={
                     user
-                        ? `What do you think of this, ${
+                        ? `Looking forward to your views, ${
                               user ? user.displayName : ''
-                          }?`
+                          }.`
                         : 'You must be logged in to leave a comment!'
                 }
             />

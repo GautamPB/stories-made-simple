@@ -54,11 +54,6 @@ function App() {
                         <PostContent />
                     </Route>
 
-                    <Route path="/post/:content">
-                        <Header />
-                        <PostContent />
-                    </Route>
-
                     <Route path="/login">
                         <Header />
                         <Login />

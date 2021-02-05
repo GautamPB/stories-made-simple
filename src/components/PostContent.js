@@ -1,6 +1,7 @@
 import { Button } from '@material-ui/core'
 import React, { useState } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
+import db from '../firebase'
 import '../styles/PostContent.css'
 
 const PostContent = () => {
@@ -12,15 +13,29 @@ const PostContent = () => {
     const [postContent, setPostContent] = useState('')
 
     const postStory = () => {
-        console.log('Story Posted!')
-        console.log(title)
-        console.log(PostContent)
+        //logic to post story
+        db.collection('stories').add({
+            contentTitle: title,
+            imageURL:
+                'https://lh3.googleusercontent.com/a-/AOh14Gi1SqiVNRARrLdtr7VhpyzoaLsW46JWKT5dAcSkNg=s96-c',
+            contentBody: postContent,
+        })
+        setTitle('')
+        setPostContent('')
+        history.push('/stories')
     }
 
     const postPoem = () => {
-        console.log('Poem Posted!')
-        console.log(title)
-        console.log(postContent)
+        //logic to post poem
+        db.collection('poems').add({
+            contentTitle: title,
+            imageURL:
+                'https://lh3.googleusercontent.com/a-/AOh14Gi1SqiVNRARrLdtr7VhpyzoaLsW46JWKT5dAcSkNg=s96-c',
+            contentBody: postContent,
+        })
+        setTitle('')
+        setPostContent('')
+        history.push('/poems')
     }
 
     const postData = (e) => {
