@@ -20,7 +20,10 @@ function Poems() {
     return (
         <div className="poems">
             {poems.map((poem) => (
-                <ContentTitle title={poem.data.contentTitle} />
+                <ContentTitle
+                    title={poem.data.contentTitle}
+                    timestamp={poem.data.timestamp}
+                />
             ))}
         </div>
     )

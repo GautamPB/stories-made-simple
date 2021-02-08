@@ -1,0 +1,55 @@
+.about {
+    margin-bottom: 40px;
+}
+
+.about__title {
+    text-align: center;
+    margin-top: 20px;
+    border-bottom: solid 1px lightgray;
+}
+
+.about__title > h1 {
+    font-size: 80px;
+}
+
+.about__title > p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.about__content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.about__content > p {
+    font-size: 50px;
+    color: gray;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.about__image {
+    max-width: 600px;
+    min-width: 350px;
+    height: 600px;
+    z-index: 0;
+}
+
+.about__stuff {
+    display: flex;
+    position: absolute;
+    left: 15%;
+    margin-top: 20px;
+}
+
+.about__me {
+    z-index: 1;
+    background: white;
+    border: solid 2px gray;
+    padding: 20px;
+    max-width: 700px;
+    margin-bottom: 100px;
+    margin-left: 20px;
+}

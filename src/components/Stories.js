@@ -20,7 +20,10 @@ function Stories() {
     return (
         <div className="stories">
             {stories.map((story) => (
-                <ContentTitle title={story.data.contentTitle} />
+                <ContentTitle
+                    title={story.data.contentTitle}
+                    timestamp={story.data.timestamp}
+                />
             ))}
         </div>
     )

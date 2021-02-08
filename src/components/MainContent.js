@@ -2,9 +2,7 @@ import React from 'react'
 import '../styles/MainContent.css'
 import BookIcon from '@material-ui/icons/Book'
 import MusicNoteIcon from '@material-ui/icons/MusicNote'
-// import AssignmentIcon from '@material-ui/icons/Assignment'
 import HourglassFullIcon from '@material-ui/icons/HourglassFull'
-import RateReviewIcon from '@material-ui/icons/RateReview'
 import { Link } from 'react-router-dom'
 
 function MainContent() {

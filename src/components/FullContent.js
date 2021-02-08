@@ -15,8 +15,6 @@ function FullContent() {
 
     const [poems, setPoem] = useState([])
 
-    const text = ''
-
     useEffect(() => {
         db.collection('stories')
             .where('contentTitle', '==', title)
@@ -69,8 +67,19 @@ function FullContent() {
                 </div>
             </div>
 
+            <div className="fullContent__image">
+                <img
+                    src={
+                        stories.length
+                            ? stories.map((story) => story.data.contentImage)
+                            : poems.map((poem) => poem.data.contentImage)
+                    }
+                    alt=""
+                />
+            </div>
+
             <textarea
-                rows="100"
+                rows="50"
                 cols="150"
                 readOnly="true"
                 className="fullContent__body"
@@ -80,6 +89,52 @@ function FullContent() {
                         : poems.map((poem) => poem.data.contentBody)
                 }
             ></textarea>
+
+            <div className="fullContent__links">
+                <h4>
+                    {stories.length || poems.length
+                        ? 'Check out the audiobook on Spotify'
+                        : ''}
+                </h4>
+                <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={
+                        stories.length
+                            ? stories.map((story) => story.data.spotifyLink)
+                            : poems.map((poem) => poem.data.spotifyLink)
+                    }
+                >
+                    {stories.length
+                        ? stories.map((story) => story.data.spotifyLink)
+                        : poems.map((poem) => poem.data.spotifyLink)}
+                </a>
+
+                <br></br>
+                <br></br>
+
+                <h4>
+                    {stories.length || poems.length
+                        ? 'Check out the audiobook on Amazon Music'
+                        : ''}
+                </h4>
+                <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={
+                        stories.length
+                            ? stories.map((story) => story.data.amazonLink)
+                            : poems.map((poem) => poem.data.amazonLink)
+                    }
+                >
+                    {stories.length
+                        ? stories.map((story) => story.data.amazonLink)
+                        : poems.map((poem) => poem.data.amazonLink)}
+                </a>
+            </div>
+
+            <br></br>
+            <br></br>
 
             <Commenter title={title} />
 

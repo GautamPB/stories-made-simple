@@ -16,6 +16,12 @@
 .form__input > input {
     font-size: 20px;
     outline: none;
+    border: none;
+    background-color: #eff2f5;
+    width: 99%;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 999px;
 }
 
 .form__input > h1 {
@@ -23,7 +29,7 @@
 }
 
 .form__input > textarea {
-    font-size: 15px;
+    font-size: 20px;
     border: none;
     padding: 15px;
     width: 98%;

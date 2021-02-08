@@ -10,7 +10,7 @@ function ContentTitle({ title, timestamp }) {
             <div className="contentTitle__left">
                 <Avatar src="https://lh3.googleusercontent.com/a-/AOh14Gi1SqiVNRARrLdtr7VhpyzoaLsW46JWKT5dAcSkNg=s96-c" />
                 <div className="content__leftData">
-                    <p>timestamp...</p>
+                    <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
                     <Link to={'/content/' + title} className="header__link">
                         <h1>{title}</h1>
                     </Link>
