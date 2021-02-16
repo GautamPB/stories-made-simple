@@ -20,7 +20,9 @@
 }
 
 .login__button {
+    justify-content: center;
     text-align: center;
+    display: flex;
 }
 
 .login__button > button {
@@ -30,4 +32,13 @@
     font-weight: bold;
     font-size: 18px;
     padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.google__image > img {
+    margin-top: 5px;
+    width: 40px;
+    object-fit: contain;
+    margin-right: 10px;
 }

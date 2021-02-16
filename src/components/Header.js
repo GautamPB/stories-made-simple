@@ -7,11 +7,22 @@ import HourglassFullIcon from '@material-ui/icons/HourglassFull'
 import InfoIcon from '@material-ui/icons/Info'
 import logo from '../Logo_1.png'
 import { Avatar } from '@material-ui/core'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { useStateValue } from './StateProvider'
 
 function Header() {
-    const [{ user }, dispatch] = useStateValue()
+    const history = useHistory()
+
+    const [{ user }] = useStateValue()
+
+    const handleLogout = () => {
+        if (user) {
+            window.location.reload()
+            history.push('/')
+        } else {
+            history.push('/login')
+        }
+    }
 
     return (
         <div className="header">
@@ -59,13 +70,18 @@ function Header() {
                 </Link>
             </div>
 
-            <div className="header__userInfo">
+            <div className="header__userInfo" onClick={handleLogout}>
                 <Link to={user ? '/' : '/login'} className="header__userInfo">
                     <Avatar
                         className="user__pic"
                         src={user ? user.photoURL : ''}
                     />
-                    <h3>{user ? user.displayName : 'Login'}</h3>
+                    <div className="logout__user">
+                        <p>{user ? 'Logout,' : ''}</p>
+                        <h3 className="user">
+                            {user ? user.displayName : 'Login'}
+                        </h3>
+                    </div>
                 </Link>
             </div>
         </div>

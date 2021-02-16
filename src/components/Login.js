@@ -40,7 +40,13 @@ const Login = () => {
 
             <div className="login__button">
                 <Button onClick={handleLogin} className="">
-                    Login
+                    <div className="google__image">
+                        <img
+                            src="http://pngimg.com/uploads/google/google_PNG19635.png"
+                            alt=""
+                        />
+                    </div>
+                    Login with google
                 </Button>
             </div>
         </div>
